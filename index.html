@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Business Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>GitHub Business Card Generator</h2> <br>
+        <input type="text" id="githubUrl" placeholder="Enter GitHub profile URL or username" />
+        <br />
+        <button id="generateBtn">Generate Card</button>
+        <button id="downloadBtn">Download PNG</button>
+        <button id="downloadPdfBtn">Download PDF</button>
+        <button id="shareBtn">Share Card</button>
+        <button id="toggleDarkMode">🌙 Toggle Dark Mode</button>
+
+        <div id="cardContainer">
+            <div id="businessCard">
+                <div style="text-align: center;">
+                    <img id="avatar" src="" alt="Avatar" />
+                    <div class="name" id="name"></div>
+                    <div class="username" id="username"></div>
+                </div>
+                <div class="bio" id="bio"></div>
+                <div class="info" id="location"></div>
+                <div class="info" id="website"></div>
+                <div class="info" id="twitter"></div>
+                <div class="stats">
+                    <div><strong>Repos:</strong> <span id="repos">0</span></div>
+                    <div><strong>Followers:</strong> <span id="followers">0</span></div>
+                    <div><strong>Following:</strong> <span id="following">0</span></div>
+                </div>
+                <div class="stats">
+                    <div><strong>Stars:</strong> <span id="stars">0</span></div>
+                </div>
+                <div id="qrCode"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
